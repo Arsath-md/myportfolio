@@ -1,0 +1,186 @@
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.text {
+  width: 100%;       /* ✅ full container width */
+  max-width: 700px;  /* ✅ optional: keep readable */
+  text-align: center;
+  padding: 0 1rem;   /* ✅ prevent touching edges */
+  box-sizing: border-box;
+}
+
+
+.btn{
+   display: flex;
+   flex-direction: row;
+   margin: 10px;
+   color: red;
+}
+.btn button{
+    padding: 10px;
+    margin-right: 20px;
+}
+.glowBtn {
+  position: relative;
+  padding: 10px;
+  width: fit-content;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background:rgb(24, 22, 22);
+  border-radius: 8px;
+  cursor: pointer;
+   border: none;
+  transition: all 0.3s ease;
+}
+
+/* Outer rotating glow */
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.glowBtn::before ,.glowBtn::after{
+  --angle:0deg;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background-image: conic-gradient(from var(--angle), transparent 60%,red,blue);
+  border-radius: 10px;
+  padding: 25px;
+  z-index: -1;
+  animation: spin 4s linear infinite;
+}
+.glowBtn::before {
+  filter: blur(5px);
+}
+
+@keyframes spin {
+  from {
+    --angle:0deg;
+  }
+  to {
+    --angle:360deg;
+  }
+}
+
+.glowBtn:hover {
+  background: linear-gradient(
+    45deg,
+   green,
+   darkblue
+  
+  );
+  background-size: 400%;
+  animation: innerGlow 3s linear infinite;
+}
+
+.glowBtn:hover::before {
+  opacity: 0;
+}
+
+@keyframes innerGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+
+/* animation for languages */
+.newscontainer {
+
+  overflow: hidden;
+  background:transparent;
+  color: #000;
+  white-space: nowrap;
+ 
+}
+
+.newstext {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 20s linear infinite;
+}
+.newstext i{
+  margin-right: 100px;
+  padding: 20px;
+  font-size:130px ;
+}
+@media (max-width: 768px) {
+  .newstext i {
+    font-size: 70px;
+    margin-right: 40px;
+  }
+}
+
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+  /* about page  */
+.innerabout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .innerabout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+  .innerabout h5{
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 30px;
+    text-align: justify;
+    padding: 10px;
+  }
+.progress {
+  text-align:justify;
+  
+}
+.progress i{
+    padding: 20px;
+    font-size: 60px;
+    font-weight: bolder;
+    
+}
+.progress div{
+  margin: 40px;
+}
+@media (max-width: 768px) {
+  .innerabout {
+    grid-template-columns: 1fr;
+  }
+}

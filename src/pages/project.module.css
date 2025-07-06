@@ -1,0 +1,110 @@
+.projects h1,p{
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+    
+}
+@media (max-width:768px) {
+     .projects{
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+     }
+}
+
+.glowBtn {
+  position: relative;
+  padding: 10px;
+  width: fit-content;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background:rgb(24, 22, 22);
+  border-radius: 8px;
+  cursor: pointer;
+   border: none;
+  transition: all 0.3s ease;
+
+
+}
+
+/* Outer rotating glow */
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.glowBtn::before ,.glowBtn::after{
+  --angle:0deg;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+   translate: -50% -50%;
+  background-image: conic-gradient(from var(--angle), transparent 60%,red,orange);
+  border-radius: 10px;
+  padding: 25px;
+  z-index: -1;
+  animation: spin 4s linear infinite;
+}
+.glowBtn::before {
+    
+  filter: blur(5px);
+  
+}
+
+@keyframes spin {
+  from {
+    --angle:0deg;
+  }
+  to {
+    --angle:360deg;
+  }
+}
+
+.glowBtn:hover {
+  background: linear-gradient(
+    45deg,
+   darkviolet,
+   darkblue
+  
+  );
+  color:aqua;
+  background-size: 400%;
+  animation: innerGlow 3s linear infinite;
+}
+
+.glowBtn:hover::before {
+  opacity: 0;
+}
+
+@keyframes innerGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.stack{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 2px rgb(20, 20, 20);
+    margin: 20px;
+}
+.stack i{
+    margin: 10px;
+    font-size: xx-large;
+    font-weight: bolder;
+}

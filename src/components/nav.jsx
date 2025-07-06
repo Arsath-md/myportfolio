@@ -1,4 +1,4 @@
-import nav from "../components/nav.module.css"
+import nav from "./nav.module.css"
 
 
 export default function Nav(){

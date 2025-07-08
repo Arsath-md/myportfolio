@@ -3,6 +3,9 @@
   padding: 0;
   color: whitesmoke;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body{
      

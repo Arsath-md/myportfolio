@@ -10,7 +10,7 @@ export default function Nav(){
       <nav className={nav.navbar}>
       <h1 className={nav.logo}>Portfolio</h1>
       <ul className={nav.navlinks}>
-       <li><a href="/">
+       <li><a href="https://github.com/Arsath-md" target="_blank" rel="noopener noreferrer">
        <i className="devicon-github-original-wordmark"></i>
        </a></li>
        <li><a href="/about">

@@ -23,6 +23,11 @@
   .navlinks{
     display: none;
   }
+  .navbar .logo{
+    margin: auto auto;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 }
 
 .navlinks li a {

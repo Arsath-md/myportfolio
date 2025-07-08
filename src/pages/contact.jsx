@@ -30,14 +30,14 @@ const ContactUs = () => {
   return (
              <>
          
-    <div className="container mt-5 pt-5 mb-5">
+    <div className="container mt-5 pt-5 mb-5" id="contact">
       <h2 className="mb-4 text-center">Get in touch</h2>
          <div className="row">
      <div className="col-12  col-lg-6 d-flex flex-column mb-5 text-center">
            <h1> <i className="bi bi-envelope m-2"></i> Mail me</h1>
-           <a href="mailto:mdarsathm.2003@gmail.com">mdarsathm.2003@gmail.com</a>
+           <a href="mailto:mdarsathm.2003@gmail.com" style={{color:"whitesmoke"}}>mdarsathm.2003@gmail.com</a>
            <h1 className="mt-3"><i className="bi bi-telephone m-2"></i>contact</h1>
-           <a href="8838607001">8838607001</a>
+           <a href="8838607001" style={{color:"whitesmoke"}}>8838607001</a>
            <h1 className="m-4">follow us on</h1>
                <div className="m-1 d-flex flex-row justify-content-evenly fs-1 ">
                 <i className="bi bi-instagram"></i>

@@ -18,10 +18,10 @@ export default function Projects(){
     return(
         <>
      
-      <div className="container text-center mt-5 pt-5 mb-5">
+      <div className="container text-center mt-5 pt-5 mb-5" id="project">
   <h1>projects</h1>
 
-  <div className={`${proj.Projects} row`}>
+  <div className={`${proj.Projects} row`} >
     <div  className="col-12 col-sm-6 col-md-6 col-lg-4 mt-3" data-aos="fade" style={{ flex: "0 0 auto" }}>
       <Paper className="h-100" elevation={5} sx={paperStyle}>
         <img src={pic} alt="pix" />

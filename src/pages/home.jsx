@@ -1,4 +1,4 @@
-import {  useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import stl from "../pages/home.module.css"
 import dev from "../assets/dev.svg"
 import {LinearProgress} from "@mui/material"
@@ -6,16 +6,15 @@ import Nav from "../components/nav";
 // import Nav from "../components/nav";
 
 export default function Home(){
-     
+     //typewriting
     const typewriterRef = useRef(null);
-
   useEffect(() => {
     if (window.Typewriter) {
       const typewriter = new window.Typewriter(typewriterRef.current, {
         loop: true,
         delay: 75,
       });
-
+  
       typewriter
         .typeString('frontend developer')
         .pauseFor(1500)
@@ -29,6 +28,29 @@ export default function Home(){
         .start();
     }
   }, []);
+
+  // progress bar
+    const [progress, setProgress] = useState(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (scrollTop / docHeight) * 100;
+      if (scrolled>=30 && scrolled<=60)
+      setProgress(true);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+    const progstyle = {
+      padding:"5px",
+      borderRadius:"10px"   
+    }
+ 
+
 
     return(
       <>
@@ -90,39 +112,39 @@ export default function Home(){
     <div style={{textAlign:"center"}}>
               <h1 className="m-5">About me</h1>
        <div className={stl.innerabout}> 
-             <div className="d-flex flex-column justify-content-start">
+             <div  className="d-flex flex-column justify-content-start">
                           <img src={dev} alt="image of mine" style={{height:"200px",margin:"25px"}}/>
 
               <h5>I’m a full-stack web developer skilled in building robust front-end and back-end solutions, with a strong passion for UI and UX design. I love transforming ideas into seamless, high-performing web applications that look great and work flawlessly across all devices, creating engaging digital experiences that connect users and technology.</h5>
              </div>
-             <div className={stl.progress}>
+             <div data-aos="fade-left" className={stl.progress}>
                 <div >
                    <i className="devicon-html5-plain-wordmark colored"></i>
                     <i className="devicon-css3-plain-wordmark colored"></i>
-                  <LinearProgress variant="determinate" value={80} /> 
+                  <LinearProgress sx={progstyle} variant="determinate" value={progress?80:0} /> 
                </div>
                  <div >
            <i className="devicon-react-original-wordmark colored"></i>
-                  <LinearProgress variant="determinate" value={50} /> 
+                  <LinearProgress sx={progstyle} variant="determinate" value={progress?50:0}/> 
                </div>
                  <div >
                          <i className="devicon-nodejs-plain-wordmark colored" ></i>
                           <i className="devicon-express-original-wordmark "></i>
-                  <LinearProgress variant="determinate" value={70} /> 
+                  <LinearProgress sx={progstyle} variant="determinate" value={progress?60:0}/> 
                </div>
                  <div >
                <i className="devicon-mysql-plain-wordmark"></i>
-                  <LinearProgress variant="determinate" value={60} /> 
+                  <LinearProgress sx={progstyle} variant="determinate" value={progress?70:0}/> 
                </div>
                  <div>
                 
             <i className="devicon-mongodb-plain-wordmark colored"></i>
           
-                  <LinearProgress variant="determinate" value={10} /> 
+                  <LinearProgress sx={progstyle} variant="determinate" value={progress?20:0}/> 
                </div>
                      <div>
                  <h5>UI & UX</h5>
-                  <LinearProgress variant="determinate" value={80} /> 
+                  <LinearProgress sx={progstyle} variant="determinate" value={progress?80:0}/> 
                </div>
             </div>
              </div>

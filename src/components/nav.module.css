@@ -19,6 +19,11 @@
   margin: 0;
   padding: 0;
 }
+@media (max-width:768px){
+  .navlinks{
+    display: none;
+  }
+}
 
 .navlinks li a {
   color: #fff;

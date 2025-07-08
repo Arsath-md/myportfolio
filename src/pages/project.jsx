@@ -11,6 +11,8 @@ export default function Projects(){
   color: "black",
   boxShadow: "0px 2px 5px wheat",
   backdropFilter: "blur(10px)",
+  margin:"10px",
+
 };
 
     return(
@@ -20,7 +22,7 @@ export default function Projects(){
   <h1>projects</h1>
 
   <div className={`${proj.Projects} row`}>
-    <div  className="col-12 col-sm-6 col-md-6 col-lg-4 " style={{ flex: "0 0 auto" }}>
+    <div  className="col-12 col-sm-6 col-md-6 col-lg-4 mt-3" data-aos="fade" style={{ flex: "0 0 auto" }}>
       <Paper className="h-100" elevation={5} sx={paperStyle}>
         <img src={pic} alt="pix" />
         <h1>Nexus event</h1>
@@ -34,9 +36,9 @@ export default function Projects(){
         </div>
         <button type="text" className={proj.glowBtn}>git hub</button>
       </Paper>
-    </div>
-
-    <div  className="col-12 col-sm-6 col-md-6 col-lg-4 " style={{ flex: "0 0 auto"}}>
+    </div> 
+ 
+    <div  className="col-12 col-sm-6 col-md-6 col-lg-4 mt-3" data-aos="fade"  style={{ flex: "0 0 auto"}}>
       <Paper className="h-100" elevation={5} sx={paperStyle}>
         <img src={pic} alt="pix" />
         <h1>Nexus event</h1>
@@ -49,9 +51,9 @@ export default function Projects(){
         </div>
         <button type="text" className={proj.glowBtn}>git hub</button>
       </Paper>
-    </div>
-
-    <div  className="col-12 col-sm-6 col-md-6 col-lg-4 " style={{ flex: "0 0 auto"}}>
+    </div> 
+ 
+    <div  className="col-12 col-sm-6 col-md-6 col-lg-4 mt-3" data-aos="fade" style={{ flex: "0 0 auto"}}>
       <Paper className="h-100" elevation={5} sx={paperStyle}>
         <img src={pic} alt="pix" />
         <h1>Nexus event</h1>

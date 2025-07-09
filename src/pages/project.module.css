@@ -1,8 +1,6 @@
 .projects h1,p{
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
-    
 }
 @media (max-width:768px) {
      .projects{
@@ -92,6 +90,7 @@
     background-position: 0% 50%;
   }
 }
+   /* stack of languages */
 .stack{
     display: flex;
     flex-direction: row;

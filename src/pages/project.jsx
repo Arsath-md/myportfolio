@@ -26,7 +26,8 @@ export default function Projects(){
       <Paper className="h-100" elevation={5} sx={paperStyle}>
         <img src={pic} alt="pix" />
         <h1>Nexus event</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur autem fuga hic officiis animi optio exercitationem possimus obcaecati eligendi ratione doloremque explicabo cupiditate recusandae, harum maiores dignissimos cum! Possimus, minima?</p>
+        <p> this project developed for the college level hackathon competion and this project is mainly focused on the announcements of the events in the colleges through their official website. 
+        this project enables to apply for the respective event, or any placement related meetings are to be conducted by the college</p>
         <div className={proj.stack}>
           <i className="devicon-html5-plain-wordmark colored"></i>
           <i className="devicon-css3-plain-wordmark colored"></i>

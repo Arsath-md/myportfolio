@@ -133,7 +133,7 @@ export default function Home() {
       {/* ABOUT SECTION */}
       <div style={{ textAlign: "center" }} id="about">
         <h1 className="m-5">About me</h1>
-        <div className={stl.innerabout}>
+        <div data-aos="fade-right" className={stl.innerabout}>
           <div className="d-flex flex-column justify-content-start">
             <img
               src={dev}
@@ -144,7 +144,7 @@ export default function Home() {
               I’m a full-stack web developer skilled in building robust
               front-end and back-end solutions, with a strong passion for UI and
               UX design. I love transforming ideas into seamless,
-              high-performing web applications that look great and work
+              high-performing web applications that work
               flawlessly across all devices, creating engaging digital
               experiences that connect users and technology.
             </h5>
@@ -205,55 +205,65 @@ export default function Home() {
         </div>
       </div>
 
- 
+              {/* speed dail */}
 
-      {/* SPEED DIAL */}
-      <SpeedDial
-        ariaLabel="Navigation"
-        sx={{
-          position: "fixed",
-          bottom: 50,
-          right: 70,
-          zIndex: 9999,
-          padding:"20px",
-          
-        }}
-        icon={<AppsIcon />}
-      >
-        <SpeedDialAction
-          icon={<HomeIcon />}
-          tooltipTitle="Home"
-      onClick={() => window.location.href="#home"}
-          sx={{background:"green" , '&:hover':{
-            background:"black"
-          }}} 
-           
-        />
-        <SpeedDialAction
-          icon={<InfoIcon />}
-          tooltipTitle="About"
-          onClick={() => scrollToSection("about")}
-             sx={{background:"green" , '&:hover':{
-              background:"black"
-             }}} 
-        />
-        <SpeedDialAction
-          icon={<WorkIcon />}
-          tooltipTitle="Projects"
-          onClick={() => scrollToSection("project")}
-             sx={{background:"green" , '&:hover':{
-              background:"black"
-             }}} 
-        />
-        <SpeedDialAction
-          icon={<ContactMailIcon />}
-          tooltipTitle="Contact"
-            onClick={() => scrollToSection("contact")}
-             sx={{background:"green" , '&:hover':{
-              background:"black"
-             }}} 
-        />
-      </SpeedDial>
+   <SpeedDial
+  ariaLabel="Navigation"
+  sx={{
+    position: "fixed",
+    bottom: { xs: 16, sm: 30, md: 50 },
+    right: { xs: 16, sm: 30, md: 50 },
+    zIndex: 9999,
+    p: "20px",
+  }}
+  icon={<AppsIcon />}
+>
+  <SpeedDialAction
+    icon={<HomeIcon />}
+    tooltipTitle="Home"
+    onClick={() => window.location.href = "#home"}
+    sx={{
+      background: "green",
+      '&:hover': {
+        background: "black",
+      },
+    }}
+  />
+  <SpeedDialAction
+    icon={<InfoIcon />}
+    tooltipTitle="About"
+    onClick={() => scrollToSection("about")}
+    sx={{
+      background: "green",
+      '&:hover': {
+        background: "black",
+      },
+    }}
+  />
+  <SpeedDialAction
+    icon={<WorkIcon />}
+    tooltipTitle="Projects"
+    onClick={() => scrollToSection("project")}
+    sx={{
+      background: "green",
+      '&:hover': {
+        background: "black",
+      },
+    }}
+  />
+  <SpeedDialAction
+    icon={<ContactMailIcon />}
+    tooltipTitle="Contact"
+    onClick={() => scrollToSection("contact")}
+    sx={{
+      background: "green",
+      '&:hover': {
+        background: "black",
+      },
+    }}
+  />
+</SpeedDial>
+
     </>
   );
 }

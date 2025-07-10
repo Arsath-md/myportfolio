@@ -42,9 +42,10 @@ const ContactUs = () => {
 
            <h1 className="m-4">follow us on</h1>
                <div className="m-1 d-flex flex-row justify-content-evenly fs-1 ">
-                <i className="bi bi-instagram " ></i>
-                <i className="bi bi-facebook" ></i>
-                <i className="bi bi-linkedin text-info"></i>
+           <a href="https://www.instagram.com/vippi31?igsh=NXF2MjZ1c2VuaTN5" target="_blank" rel="noopener noreferrer"> <i className="bi bi-instagram " ></i></a>
+              <a href="https://www.facebook.com/share/16EFhQdNZY/" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook" ></i></a> 
+             <a href="https://www.linkedin.com/in/mohamed-arsath-0a45b6347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+       <i className="bi bi-linkedin text-info"></i></a>
                </div>
 
       </div>

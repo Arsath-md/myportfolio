@@ -14,15 +14,16 @@
       overflow-x: scroll;
       overflow-y: hidden;
       scroll-snap-type: x mandatory;
+      flex: 1 1 0;
      }
      .projects div{
-      text-align: center;
 
       scroll-snap-align: center;
-      padding:30px;
+      padding:20px;
         width:fit-content;
           flex-shrink:  0;
           margin: 10px;
+               flex:auto auto auto;
      }
 }
 
@@ -114,24 +115,14 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    text-align: center;
+   flex-shrink: 0;
     border: none;
     border-radius: 10px;
     box-shadow: 2px 2px 3px 2px rgb(20, 20, 20);
-    margin: 20px;
+    margin: 10px;
 }
 .stack i{
     margin: 10px;
     font-size: xx-large;
     font-weight: bolder;
-}
-@media (max-width:768px) {
-  .stack i{
-    margin: 10px;
-    font-size: xx-large;
-    font-weight: bolder;
-}
-.stack{
-  margin: auto auto;
-}
 }

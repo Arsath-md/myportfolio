@@ -3,18 +3,24 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-.projects h1,p{
+.projects img{
+  height:100px
+}
+.projects p{
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:justify;
+    
 }
 @media (max-width:768px) {
      .projects{
       display: flex;
       flex-direction: row;
       overflow-x: scroll;
-      overflow-y: hidden;
+  
       scroll-snap-type: x mandatory;
       flex: 1 1 0;
+  
      }
      .projects div{
 
@@ -22,8 +28,8 @@
       padding:20px;
         width:fit-content;
           flex-shrink:  0;
-          margin: 10px;
-               flex:auto auto auto;
+          margin: 10px auto;
+         
      }
 }
 

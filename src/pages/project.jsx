@@ -12,6 +12,7 @@ export default function Projects(){
   boxShadow: "0px 2px 5px wheat",
   backdropFilter: "blur(10px)",
   margin:"10px",
+  
 
 };
 
@@ -21,8 +22,8 @@ export default function Projects(){
       <div className="container text-center mt-5 pt-5 mb-5" id="project">
   <h1>projects</h1>
 
-  <div className={`${proj.Projects} row`} >
-    <div  className="col-12 col-sm-6 col-md-6 col-lg-4 mt-3" data-aos="fade" style={{ flex: "0 0 auto" }}>
+  <div className={`${proj.projects}`} >
+    <div   data-aos="fade" >
       <Paper className="h-100" elevation={5} sx={paperStyle}>
         <img src={pic} alt="pix" />
         <h1>Nexus event</h1>
@@ -39,7 +40,7 @@ export default function Projects(){
       </Paper>
     </div> 
  
-    <div  className="col-12 col-sm-6 col-md-6 col-lg-4 mt-3" data-aos="fade"  style={{ flex: "0 0 auto"}}>
+    <div   data-aos="fade"  >
       <Paper className="h-100" elevation={5} sx={paperStyle}>
         <img src={pic} alt="pix" />
         <h1>Nexus event</h1>
@@ -54,12 +55,12 @@ export default function Projects(){
       </Paper>
     </div> 
  
-    <div  className="col-12 col-sm-6 col-md-6 col-lg-4 mt-3" data-aos="fade" style={{ flex: "0 0 auto"}}>
+    <div   data-aos="fade" >
       <Paper className="h-100" elevation={5} sx={paperStyle}>
         <img src={pic} alt="pix" />
         <h1>Nexus event</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel obcaecati, accusantium minus alias exercitationem ratione reiciendis quod molestiae sit iste temporibus quaerat hic aspernatur minima non repellendus magni tenetur esse?</p>
-        <div className={proj.stack}>
+        <div className={`${proj.stack} "text-center"`}>
           <i className="devicon-html5-plain-wordmark colored"></i>
           <i className="devicon-css3-plain-wordmark colored"></i>
           <i className="devicon-javascript-plain colored"></i>

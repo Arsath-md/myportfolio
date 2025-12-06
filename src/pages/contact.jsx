@@ -1,109 +1,83 @@
-import{ useRef } from "react";
-import emailjs from "@emailjs/browser";
+// Contact Section Component
+// Shows contact info, location map, and a simple contact form.
 
-const ContactUs = () => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        hifi4611,
-        "YOUR_TEMPLATE_ID", 
-        form.current, 
-        "YOUR_PUBLIC_KEY"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Message Sent Successfully!");
-          form.current.reset();
-        },
-        (error) => {
-          console.log(error.text);
-          alert("Oops! Something went wrong.");
-        }
-      );
-  };
-
+export default function Contact() {
   return (
-             <>
-         
-    <div className="container mt-5 pt-5 mb-5" id="contact">
-      <h2 className="mb-4 text-center">Get in touch</h2>
-    <div className="row">
-       <div className="col-12  col-lg-6 d-flex flex-column mb-5 text-center">
-           <h1><i className="bi bi-envelope m-2"></i> Mail me</h1>
-           <a href="mailto:mdarsathm.2003@gmail.com" style={{color:"whitesmoke"}}>mdarsathm.2003@gmail.com</a>
+    <div className="container text-center m-5 mx-auto" id="contact">
 
-           <h1 className="mt-3"><i className="bi bi-telephone m-2"></i>contact</h1>
-           <a href="8838607001" style={{color:"whitesmoke"}}>8838607001</a>
+      {/* Section Title */}
+      <h1>Get in touch</h1>
 
-           <h1 className="m-4">follow us on</h1>
-               <div className="m-1 d-flex flex-row justify-content-evenly fs-1 ">
-           <a href="https://www.instagram.com/vippi31?igsh=NXF2MjZ1c2VuaTN5" target="_blank" rel="noopener noreferrer"> <i className="bi bi-instagram " ></i></a>
-              <a href="https://www.facebook.com/share/16EFhQdNZY/" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook" ></i></a> 
-             <a href="https://www.linkedin.com/in/mohamed-arsath-0a45b6347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
-       <i className="bi bi-linkedin text-info"></i></a>
-               </div>
+      <div className="row m-5">
+
+        {/* Left Side — Contact Details + Map */}
+        <div className="col-12 col-md-6 d-flex flex-column">
+{/* Phone */}
+<div className="d-flex flex-row align-items-center contact-item">
+  <i className="bi-telephone-fill m-2" style={{ fontSize: "1.3rem" }}></i>
+  <a 
+    href="tel:88386xxxxx" 
+    className="m-2 text-decoration-none fw-bold"
+    style={{ color: "#fff", letterSpacing: "0.5px" }}
+  >
+    +91 88386 07xxx
+  </a>
+</div>
+
+{/* Email */}
+<div className="d-flex flex-row align-items-center contact-item">
+  <i className="bi-envelope-fill m-2" style={{ fontSize: "1.3rem" }}></i>
+  <a 
+    href="mailto:mdarsath.m2003@gmail.com" 
+    className="m-2 text-decoration-none fw-bold"
+    style={{ color: "#fff", letterSpacing: "0.5px" }}
+  >
+    mdarsath.m2003@gmail.com
+  </a>
+</div>
+
+
+          {/* Google Map */}
+          <div className="d-flex flex-column mt-3">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15660.621733139029!2d79.64226883848214!3d11.101791181365526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5526c731f25c21%3A0x4339eccad0b5866a!2sMayiladuthurai%2C%20Tamil%20Nadu%20609001!5e0!3m2!1sen!2sin!4v1735747185088!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Maps location"
+            ></iframe>
+          </div>
+        </div>
+
+        {/* Right Side — Contact Form */}
+        <div className="col-12 col-md-6 mt-5">
+          <form>
+
+            {/* Name */}
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" className="form-control mb-3" />
+
+            {/* Email */}
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" className="form-control mb-3" />
+
+            {/* Message */}
+            <label htmlFor="message">Message</label>
+            <textarea id="message" className="form-control mb-3"></textarea>
+
+            {/* Submit */}
+            <div>
+              <button type="submit" className="btn btn-primary mt-2">
+                Submit
+              </button>
+            </div>
+
+          </form>
+        </div>
 
       </div>
-
-      <div className="col-12  col-lg-6">
-         <h1 className="text-center fw-bold text-info m-4">    
-          <i className="bi bi-chat-dots text-center text-primary"></i> Any queries </h1>
-      <form ref={form} onSubmit={sendEmail}>
-        <div className="mb-3">
-          <label htmlFor="user_name" className="form-label">
-            Name
-          </label>
-          <input
-            type="text"
-            name="user_name"
-            className="form-control"
-            id="user_name"
-            required
-          />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="user_email" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            name="user_email"
-            className="form-control"
-            id="user_email"
-            required
-          />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="message" className="form-label">
-            Message
-          </label>
-          <textarea
-            name="message"
-            className="form-control"
-            id="message"
-            rows="4"
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit" className="btn btn-primary">
-          Send Message
-        </button>
-      </form>
-      </div>
-         </div>
-    
     </div>
-    
-    </>
   );
-};
-
-export default ContactUs;
+}

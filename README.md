@@ -1,12 +1,70 @@
-# React + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive portfolio website built using **React + Vite**.  
+This project showcases my skills, work experience, projects, and ways to contact me.  
+The UI focuses on smooth animations, clean layout, and a professional presentation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- **React 19**
+- **Vite**
+- **Bootstrap 5 & Bootstrap Icons**
+- **AOS (Animate On Scroll)**
+- **Material UI (Progress Bars, SpeedDial)**
+- **TypewriterJS**
+- **CSS Modules**
+- **Custom Gradient & Glassmorphism Styles**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+### 🎯 Hero Section
+- Typewriter animation for role text  
+- Responsive hero layout with developer intro  
+- Animated gradient background  
+- Custom conic-gradient glow buttons  
+
+### 👤 About Section
+- AOS fade animations  
+- UI/UX-centered content layout  
+- Skill progress bars using Material UI  
+- Fully responsive design  
+
+### 🛠 Projects Section
+- Glassmorphism-styled project cards  
+- Tech stack icon badges  
+- Responsive grid → mobile horizontal scroll  
+- Buttons for GitHub project links  
+
+### 📞 Contact Section
+- Phone & email info  
+- Google Map embed  
+- Styled contact form with focus animations  
+
+### 🧭 Navigation Bar
+- Custom navbar with logo and social icons  
+- GitHub, LinkedIn, Twitter profile links  
+- Floating Material UI **SpeedDial** for quick page navigation  
+
+---
+
+
+---
+
+## 🧑‍💻 Installation & Setup
+
+### 1️⃣ Install dependencies
+```bash
+npm install
+
+Start development server
+npm run dev
+
+3️⃣ Build for production
+npm run build
+
+4️⃣ Preview production build
+npm run preview

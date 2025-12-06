@@ -2,9 +2,11 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from "./pages/home"
 import Projects from "./pages/project"
-import ContactUs from "./pages/contact"
+import Contact from "./pages/contact"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './App.css';
+
 
 function App() {
 
@@ -24,7 +26,7 @@ AOS.init({
    
     <Home/>
     <Projects/>
-    <ContactUs/>
+    <Contact/>
     
   </>
   )

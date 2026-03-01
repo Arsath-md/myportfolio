@@ -1,0 +1,49 @@
+[
+    {
+        "title" : "Nexus event",
+        "desc":" this project developed for the college level hackathon competion and this project is mainly focused on the announcements of the events in the colleges through their official website.This project enables to apply for the respective event, or any placement related meetings are to be conducted by the college",
+        "stack":[
+            "devicon-html5-plain-wordmark colored",
+            "devicon-css3-plain-wordmark colored",
+            "devicon-javascript-plain colored",
+            "devicon-mysql-plain-wordmark",
+            "devicon-php-plain colored"
+        ]
+    },{
+        "title":"Node.js Login System with bcrypt",
+        "imgs":"/imgs/bycrypt.png",
+        "desc":"A simple and secure user login system built with Node.js, Express, and bcrypt. Implements password hashing, and basic validation.Node.js authentication project using Express and bcrypt for secure password hashing. ",
+        "stack":[
+             "devicon-html5-plain-wordmark colored",
+            "devicon-css3-plain-wordmark colored",
+            "devicon-javascript-plain colored",
+            "devicon-mysql-plain-wordmark",
+            "devicon-nodejs-plain-wordmark",   
+            "devicon-express-original-wordmark"
+
+        ]
+    },{
+
+        "title":"Cat Facts Website",
+        "imgs":"/imgs/apilogo.png",
+        "desc":"A simple web app that fetches random cat facts using a free public API and styles the page with Tailwind CSS.code to extract the data fromthe free api website called catfact and styled with tailwind.",
+        "stack":[
+             "devicon-html5-plain-wordmark colored",
+            "devicon-css3-plain-wordmark colored",
+            "devicon-javascript-plain colored",
+            "devicon-tailwindcss-plain-wordmark colored"
+        ]
+    },
+    {
+
+        "title":"Local Notes",
+        "imgs":"/imgs/notepad.png",
+        "desc":"QuickNotes is my first React application, The app allows users to write notes, save them locally using localStorage, and retrieve them later by key. This project helped me learn how React handles form inputs, conditional rendering, and persistent data without using a backend.",
+        "stack":[
+             "devicon-html5-plain-wordmark colored",
+            "devicon-css3-plain-wordmark colored",
+            "devicon-javascript-plain colored",
+            "devicon-react-plain-wordmark colored"
+        ]
+    }
+]

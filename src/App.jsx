@@ -1,5 +1,4 @@
 // import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from "./pages/home"
 import Projects from "./pages/project"
 import Contact from "./pages/contact"
@@ -31,5 +30,4 @@ AOS.init({
   </>
   )
 }
-
 export default App

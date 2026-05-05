@@ -41,14 +41,14 @@ export default function Contact() {
           <div className="d-flex align-items-center">
             <i className="bi-telephone-fill m-2"></i>
             <a href="tel:+918838607xxx" className="m-2 text-decoration-none text-white fw-bold">
-              +91 88386 07xxx
+              +91 88386 07001
             </a>
           </div>
 
           <div className="d-flex align-items-center">
             <i className="bi-envelope-fill m-2"></i>
-            <a href="mailto:your@email.com" className="m-2 text-decoration-none text-white fw-bold">
-              your@email.com
+            <a href="mailto:mdarsath.m2003@gmail.com" className="m-2 text-decoration-none text-white fw-bold">
+                    mdarsath.m2003@gmail.com
             </a>
           </div>
 

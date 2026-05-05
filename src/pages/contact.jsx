@@ -40,7 +40,7 @@ export default function Contact() {
 
           <div className="d-flex align-items-center">
             <i className="bi-telephone-fill m-2"></i>
-            <a href="tel:+918838607xxx" className="m-2 text-decoration-none text-white fw-bold">
+            <a href="tel:+918838607001" className="m-2 text-decoration-none text-white fw-bold">
               +91 88386 07001
             </a>
           </div>

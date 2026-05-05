@@ -13,25 +13,28 @@
     text-align:justify;
     
 }
-@media (max-width:768px) {
-     .projects{
-      display: flex;
-      flex-direction: row;
-      overflow-x: scroll;
-  
-      scroll-snap-type: x mandatory;
-      flex: 1 1 0;
-  
-     }
-     .projects div{
+@media (max-width: 768px) {
 
-      scroll-snap-align: center;
-      padding:20px;
-        width:fit-content;
-          flex-shrink:  0;
-          margin: 10px auto;
-         
-     }
+  .projects {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px;
+  }
+
+  .projects::-webkit-scrollbar {
+    display: none; /* hide scrollbar */
+  }
+
+  .projects div {
+    flex: 0 0 85%; /* nice card width */
+    scroll-snap-align: start;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 0;
+  }
+
 }
 
 .glowBtn {

@@ -3,21 +3,24 @@
   justify-content: space-between;
   align-items: center;
   background-color: #333;
-  padding: 10px;
   background: transparent;
+  
+  
 }
 
 .navbar .logo {
+  display: inline-block;
   color: #fff;
-  margin: 0;
+  transition: 0.5s;
 }
-
+.navbar i:hover{
+  transition:0.5s ease-out;
+  transform: scale(1.1);  
+}
 .navlinks {
   list-style: none;
   display: flex;
   gap: 15px;
-  margin: 0;
-  padding: 0;
 }
 @media (max-width:768px){
   .navlinks{

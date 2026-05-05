@@ -4,7 +4,8 @@
   gap: 1rem;
 }
 .projects img{
-  height:100px
+  height:100px;
+  width : 200px;
 }
 .projects p{
     font-weight: bold;
@@ -45,6 +46,7 @@
   cursor: pointer;
    border: none;
   transition: all 0.3s ease;
+  
 
 
 }

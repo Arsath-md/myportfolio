@@ -2,8 +2,7 @@ import proj from "../pages/project.module.css"
 import { Paper } from "@mui/material"
 import pic from "../assets/react.svg"
 import { useEffect, useState } from "react";
-
-
+import { toast,ToastContainer } from "react-toastify";
 export default function Projects(){
 
   const [getdata ,setGetdata] = useState([]);
@@ -32,10 +31,14 @@ export default function Projects(){
   <h1 className="text-center ">projects</h1>
 
   <div >
+             <ToastContainer toastStyle={{fontWeight:"bolder",fontSize:"20px"}}/>
+
     <div  data-aos="fade" className={`${proj.projects}`} >
+
       {
         getdata.map((value,keys)=>(
          <Paper className="h-100 d-flex flex-column " elevation={5} sx={paperStyle} key={keys}>
+          
                       <div><img src={value.imgs} alt="pix" className={`${proj.img}`}/></div>
                       <div>                      <h1>{value.title}</h1></div>
                       <div><p>{value.desc}</p></div>
@@ -45,15 +48,31 @@ export default function Projects(){
                                ))}
                             </div>
                   
-                  <div className="mt-auto">
-                        <button type="text" className={`${proj.glowBtn}`}>
-                          <a href="" style={{textDecoration:"none"}}>Github</a>
+                  <div className="mt-auto "style={{display:"flex",justifyContent:"space-around"}}>
+                        
+                            <button type="text" className={`${proj.glowBtn}`}>
+                          <a href={value.git} style={{textDecoration:"none"}}>Github</a>
                         </button>
+                        
+                        
+                    
+                        
+                        <button type="button" className={proj.glowBtn} onClick={() => {
+                                    if (!value.live) {
+                                      toast.info("The project will live soon..");
+                                    }
+                                  }}>
+                        <a href={value.live} target="_blank" style={{ textDecoration: "none" }} >
+                          Live demo
+                        </a>
+                      </button>
+
                   </div>
+
          </Paper>
         ))
       }
-      
+
      
     </div> 
  

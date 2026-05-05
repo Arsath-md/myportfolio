@@ -1,6 +1,7 @@
 [
     {
         "title" : "Nexus event",
+        "imgs":"/imgs/nexus.jpeg",
         "desc":" this project developed for the college level hackathon competion and this project is mainly focused on the announcements of the events in the colleges through their official website.This project enables to apply for the respective event, or any placement related meetings are to be conducted by the college",
         "stack":[
             "devicon-html5-plain-wordmark colored",
@@ -8,7 +9,9 @@
             "devicon-javascript-plain colored",
             "devicon-mysql-plain-wordmark",
             "devicon-php-plain colored"
-        ]
+        ],
+        "git":"https://github.com/karthi3075/avc_hackathon",
+        "live":null
     },{
         "title":"Node.js Login System with bcrypt",
         "imgs":"/imgs/bycrypt.png",
@@ -21,18 +24,23 @@
             "devicon-nodejs-plain-wordmark",   
             "devicon-express-original-wordmark"
 
-        ]
+        ],
+        "git":"https://github.com/Arsath-md/nodejs-bcrypt-login",
+        "live":null
+
     },{
 
         "title":"Cat Facts Website",
         "imgs":"/imgs/apilogo.png",
-        "desc":"A simple web app that fetches random cat facts using a free public API and styles the page with Tailwind CSS.code to extract the data fromthe free api website called catfact and styled with tailwind.",
+        "desc":"A simple web app that fetches random cat facts using a free public API and styles the page with Tailwind CSS.code to extract the data fromthe free api website called catfact and styled with tailwind. This project show the using and integration of API",
         "stack":[
              "devicon-html5-plain-wordmark colored",
             "devicon-css3-plain-wordmark colored",
             "devicon-javascript-plain colored",
             "devicon-tailwindcss-plain-wordmark colored"
-        ]
+        ],
+            "git":"https://github.com/Arsath-md/working_with_api-tailwind",
+            "live":"https://arsath-md.github.io/working_with_api-tailwind"
     },
     {
 
@@ -44,6 +52,37 @@
             "devicon-css3-plain-wordmark colored",
             "devicon-javascript-plain colored",
             "devicon-react-plain-wordmark colored"
-        ]
-    }
+        ],
+                "git":"https://github.com/Arsath-md/Local-notes",
+                "live":null
+
+    },{
+  "title": "HomeCare",
+  "imgs": "/imgs/homecare.jpeg",
+   "desc": "HomeCare is a web application built for a real client to handle home service bookings. Users can send requests directly through EmailJS. I developed most of the project, including the design and frontend, with partial collaboration from a friend. This project gave me practical experience in building and delivering a real-world solution."
+,
+  "stack": [
+    "devicon-html5-plain-wordmark colored",
+    "devicon-css3-plain-wordmark colored",
+    "devicon-javascript-plain colored",
+    "devicon-react-plain-wordmark colored"
+  ],
+          "git":"https://github.com/Arsath-md/homecare",
+          "live":"https://homecare-alpha.vercel.app/"
+
+},{
+  "title": "Full Stack Blog App",
+  "imgs": "/imgs/image.png",
+  "desc": "A complete full-stack blogging platform built using React (Vite) for the frontend and Node.js with Express and MySQL for the backend. It includes authentication, CRUD operations for blog posts, image uploads with Multer, featured posts, user dashboard, search functionality, and user analytics like post count.",
+  "stack": [
+    "devicon-react-original colored",
+    "devicon-vitejs-plain colored",
+    "devicon-nodejs-plain colored",
+    "devicon-express-original",
+    "devicon-mysql-plain colored",
+    "devicon-javascript-plain colored"
+  ],
+  "git": "https://github.com/Arsath-md/my-blog",
+  "live": null
+}
 ]

@@ -85,8 +85,9 @@ export default function Home() {
 
         <div className={stl.btn}>
           <button className={stl.glowBtn}>Explore</button>
-          <button className={stl.glowBtn}>Download CV</button>
-        </div>
+<a href="/resume.pdf" download>
+  <button className={stl.glowBtn}>Download Resume</button>
+</a>        </div>
       </div>
 
       {/* ANIMATION STYLE */}

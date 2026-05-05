@@ -9,9 +9,14 @@ export default function Nav(){
  
   return (
       <nav className={nav.navbar}>
-      <img src={logos} style={{height:"100px"}} alt="logo" />
-      <h1 className={nav.logo}>Portfolio</h1>
-      <ul className={nav.navlinks}>
+        <div>
+          <img src={logos} style={{height:"100px"}} alt="logo" />
+        </div>
+        <div style={{width:"fit-content",textAlign:"center",margin:"auto auto"}}>
+           <h1 className={nav.logo}>Portfolio</h1>
+        </div>
+     <div>
+       <ul className={nav.navlinks}>
        <li><a href="https://github.com/Arsath-md" target="_blank" rel="noopener noreferrer">
        <i className="devicon-github-original-wordmark"></i>
        </a></li>
@@ -19,10 +24,12 @@ export default function Nav(){
        <i className="devicon-linkedin-plain colored"></i>
        </a></li>
        <li><a href="https://twitter.com/vippi31?t=pr8M7A5ON2CLIeTXfubYkQ&s=09
-" target="_blank" rel="noopener noreferrer">
+            " target="_blank" rel="noopener noreferrer">
        <i className="devicon-twitter-original"></i>
        </a></li>
       </ul>
+     </div>
+     
     </nav>
   );
 }

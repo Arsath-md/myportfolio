@@ -37,8 +37,12 @@ export default function Projects(){
 
       {
         getdata.map((value,keys)=>(
-         <Paper className="h-100 d-flex flex-column " elevation={5} sx={paperStyle} key={keys}>
-          
+                    <Paper
+                      className="d-flex flex-column"
+                      elevation={5}
+                      sx={{ ...paperStyle, height: "100%" }}
+                      key={keys}
+                    >          
                       <div><img src={value.imgs} alt="pix" className={`${proj.img}`}/></div>
                       <div>                      <h1>{value.title}</h1></div>
                       <div><p>{value.desc}</p></div>
@@ -48,8 +52,7 @@ export default function Projects(){
                                ))}
                             </div>
                   
-                  <div className="mt-auto "style={{display:"flex",justifyContent:"space-around"}}>
-                        
+                        <div className="mt-auto d-flex justify-content-around">                        
                             <button type="text" className={`${proj.glowBtn}`}>
                           <a href={value.git} style={{textDecoration:"none"}}>Github</a>
                         </button>
